@@ -1,4 +1,4 @@
-import 'package:mareprospection/Animation/FadeAnimation.dart';
+  import 'package:mareprospection/Animation/FadeAnimation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mareprospection/inscription.dart';
@@ -152,7 +152,7 @@ class HomePage extends StatelessWidget {
 											),
 											child: Center(
 												child: FlatButton(
-														onPressed: GoInscription,
+														onPressed: () => goInscription(context),
 														child: Text("Inscription", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),)
 											),
 										)),
@@ -166,12 +166,19 @@ class HomePage extends StatelessWidget {
 	      ),
       )
     );
+
+
+
   }
 
 
-  void GoInscription() {
+  void goInscription(BuildContext context) {
   	Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
   		return new Inscription();
 		}));
+
+
+		//Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new Inscription()));
+
 	}
 }

@@ -1,4 +1,4 @@
-import 'package:day12_login/Animation/FadeAnimation.dart';
+import 'package:mareprospection/Animation/FadeAnimation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

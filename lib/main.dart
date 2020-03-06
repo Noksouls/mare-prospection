@@ -1,6 +1,7 @@
 import 'package:mareprospection/Animation/FadeAnimation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:mareprospection/inscription.dart';
 
 void main() => runApp(
   MaterialApp(
@@ -135,7 +136,7 @@ class HomePage extends StatelessWidget {
 	                    ),
 	                    child: Center(
 	                      child: Text("Se connecter", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
-	                    ),
+											),
 	                  )),
 										SizedBox(height: 30,),
 										FadeAnimation(2, Container(
@@ -150,7 +151,9 @@ class HomePage extends StatelessWidget {
 													)
 											),
 											child: Center(
-												child: Text("Inscription", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+												child: FlatButton(
+														onPressed: GoInscription,
+														child: Text("Inscription", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),)
 											),
 										)),
 	                  SizedBox(height: 70,),
@@ -164,4 +167,11 @@ class HomePage extends StatelessWidget {
       )
     );
   }
+
+
+  void GoInscription() {
+  	Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) {
+  		return new Inscription();
+		}));
+	}
 }

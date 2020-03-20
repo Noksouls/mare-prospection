@@ -1,4 +1,4 @@
-  import 'package:mareprospection/Animation/FadeAnimation.dart';
+import 'package:mareprospection/Animation/FadeAnimation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mareprospection/inscription.dart';
